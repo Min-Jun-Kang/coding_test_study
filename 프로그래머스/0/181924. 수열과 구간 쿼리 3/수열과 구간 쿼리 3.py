@@ -1,8 +1,6 @@
 def solution(arr, queries):
     answer = []
     for idx, [i,j] in enumerate(queries):
-        temp = arr[i]
-        arr[i] = arr[j]
-        arr[j] = temp
+        arr[i], arr[j] = arr[j], arr[i]
     answer = arr
     return answer
